@@ -1,0 +1,82 @@
+/* متغيرات لونية */
+:root{
+  --primary: #0d6efd; /* أزرق حيوي */
+  --secondary: #ff7a59; /* غامق قليلاً للحداثة */
+  --muted-bg: #f8f9fa;
+  --card-radius: 12px;
+  --font-main: "Tajawal", "Cairo", sans-serif;
+}
+
+/* الخط العام */
+body{
+  font-family: var(--font-main);
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header branding tweak */
+.navbar-brand .fa-calendar-days{
+  transform: rotate(-10deg);
+}
+
+/* Section titles */
+.section-title {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Cards */
+.card{
+  border-radius: var(--card-radius);
+}
+
+/* Badges/Category buttons aesthetic */
+.badge-culture { border: 1px solid #6f42c1; color: #6f42c1; background: transparent; }
+.badge-sports { border: 1px solid #198754; color: #198754; background: transparent; }
+.badge-music { border: 1px solid #d63384; color: #d63384; background: transparent; }
+.badge-family { border: 1px solid #fd7e14; color: #fd7e14; background: transparent; }
+
+/* Events grid card images */
+.event-card-img {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Scroll to top button */
+#scrollTopBtn{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+  z-index: 1000;
+}
+
+/* Dark mode (toggled by JS) */
+body.dark-mode{
+  background-color: #121217;
+  color: #e6e6e6;
+}
+body.dark-mode .card{
+  background-color: #1b1b1f;
+  color: #e6e6e6;
+}
+body.dark-mode footer{
+  background-color: #0f1720;
+  color: #cfcfcf;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px){
+  .event-card-img { height: 140px; }
+}
+
+/* Small helper */
+.small-muted { color: #6c757d; }
